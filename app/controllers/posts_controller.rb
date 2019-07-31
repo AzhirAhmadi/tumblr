@@ -14,7 +14,9 @@ class PostsController < ApplicationController
         @post=Post.new(post_params)
         if @post.save
             redirect_to @post
-        end
+          else
+            render "new"
+          end
     end
 
     def show

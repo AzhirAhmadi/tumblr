@@ -1,6 +1,12 @@
 %div#post_content
     %h1 Make a new post
     = form_for @post, url: posts_path do |f|
+        - if @post.errors.any?
+            %h2= = pluralize(@post.errors.count, "error") stopped this post from saving!
+            %ul
+                - @post.errors.full_messages.each do |msg|
+                    %li= msg
+
         %p
             = f.label :title
             %br
