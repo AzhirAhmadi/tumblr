@@ -1,0 +1,30 @@
+%html
+  %head
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = csrf_meta_tags
+  %body
+    %div#sidebar
+      %ul
+        %li.category= link_to "Tumblr", root_path
+        %li= link_to "Posts", root_path
+        %li About
+
+      %p.sign_in User Login
+
+    %div#main_content
+      %div#header
+        %p Post Feed
+        %div.buttons
+          %button.button= link_to "Make Post", new_post_path
+          %button.button= link_to "Log Out"
+
+      -flash.each do |name, msg|
+        = content_tag(:div, msg, class: "alert")
+
+      = yield
+
+
+
+
+
