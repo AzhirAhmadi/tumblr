@@ -3,6 +3,7 @@
  */
 
  @import 'normalize.css.scss';
+ @import 'devise.css.scss';
 
  html, body {
      font-family: 'Raleway', sans-serif;
@@ -23,7 +24,7 @@
      left: 0;
      top: 0;
      height: 100%;
-     background: #88D0AD;
+     background: #3fc46f;
      padding: 7em 0 0 0;
      border-right: 1px solid #b8e2fe;
  
@@ -142,6 +143,7 @@
              margin: .5em 0 0 0;
          }
      }
+     
      #post_content {
          padding: 1em 3em;
          .title {

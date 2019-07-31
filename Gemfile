@@ -39,6 +39,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 #my gems
 gem 'haml'
 gem 'annotate'
+gem 'devise'
 
 
 group :development, :test do
