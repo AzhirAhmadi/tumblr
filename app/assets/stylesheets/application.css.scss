@@ -65,12 +65,12 @@
  
  .button {
      outline: none;
-     background: #999;
-     border: 1.5px solid #bbb;
+     background: rgb(113, 165, 196);
+     border: 2px solid #529FCD;
      padding: .5em 2.5em;
      border-radius: 0.5em;
      &:hover {
-         border: 1px solid #333734;
+         border: 2px solid rgb(47, 143, 199);
          color: #22487b;
          a {
              color: #22487b !important;
@@ -100,7 +100,7 @@
              color: #FFF;
              text-decoration: none;
          }
-         .buttons {
+         .buttons-r {
              float: right;
              margin-top: -6px;
              .button {
@@ -108,6 +108,15 @@
                  margin-left: .5em;
              }
          }
+
+         .buttons-l {
+            float: left;
+            margin-top: -6px;
+            .button {
+                font-size: .8em;
+                margin-left: .5em;
+            }
+        }
      }
      .post_wrapper {
          padding: 1.9em;
