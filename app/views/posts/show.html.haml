@@ -1,4 +1,9 @@
 %div#post_content
     %h1.title= @post.title
-    %p.date= time_ago_in_words(@post.created_at)
+    %p.date
+        = time_ago_in_words(@post.created_at)+" |"
+        = link_to "Edit", edit_post_path, class: "button"
+        = link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?"}, class: "button"
+       
+       
     %p.body= @post.body
